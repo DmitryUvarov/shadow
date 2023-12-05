@@ -504,3 +504,159 @@
     z-index: 1;
   }
 }
+
+//========================================================================================================================================================
+
+.contacts {
+  @include adaptiveValue("padding-top", 120, 35);
+  @include adaptiveValue("padding-bottom", 100, 40);
+  &__container {
+    display: grid;
+    @include adaptiveValue("gap", 70, 45);
+    & > * {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 30, 20);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    margin-bottom: toRem(20);
+    text-align: start;
+  }
+
+  &__subtitle {
+    @include adaptiveValue("font-size", 25, 20);
+    line-height: 120%; /* 30/25 */
+
+    @include adaptiveValue("margin-bottom", 120, 35);
+  }
+
+  &__line {
+    display: flex;
+    @include adaptiveValue("gap", 17, 10);
+
+    &::before {
+      @include adaptiveValue("font-size", 39, 25);
+    }
+  }
+
+  &__line-body {
+    display: grid;
+    @include adaptiveValue("gap", 30, 20);
+
+    @include adaptiveValue("font-size", 22, 17);
+    line-height: 136.4%; /* 30/22 */
+  }
+
+  &__line-text {
+    max-width: toRem(500);
+  }
+
+  &__line-title {
+    font-weight: 700;
+  }
+
+  &__map {
+    flex: 0 0 percent(488, 1180);
+    position: relative;
+    padding-bottom: percent(415, 1180);
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+
+    iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__submit {
+  }
+
+  &__readmore {
+  }
+}
+
+.submit {
+  &__title {
+    text-align: start;
+    @include adaptiveValue("margin-bottom", 45, 30);
+  }
+
+  &__form {
+  }
+}
+.form-submit {
+  display: flex;
+  flex-direction: column;
+
+  &__inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(390), 1fr));
+    @include adaptiveValue("gap", 20, 15);
+  }
+
+  &__input {
+  }
+
+  &__button {
+    margin-left: auto;
+    min-width: toRem(245);
+
+    @include adaptiveValue("margin-top", 37, 20);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.readmore {
+  &__title {
+    max-width: toRem(753);
+    @include adaptiveValue("margin-bottom", 57, 30);
+    text-align: start;
+  }
+
+  &__body {
+    display: flex;
+    @include adaptiveValue("gap", 36, 15, 0, 1210, 767);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-ibg {
+    flex: 0 0 percent(580, 1180);
+    padding-bottom: percent(453, 1180);
+    height: fit-content;
+
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
+    }
+  }
+
+  &__showmore {
+  }
+}
