@@ -60,9 +60,21 @@
     }
 
     &_8 {
-      width: percent(317, 1920);
-      bottom: percent(-135, 1080);
-      left: percent(-161, 1920);
+      width: percent(364, 1920);
+      top: percent(0, 1405);
+      right: percent(215, 1920);
+    }
+
+    &_9 {
+      width: percent(315, 1920);
+      top: percent(697, 1405);
+      right: percent(27, 1920);
+    }
+
+    &_10 {
+      width: percent(490, 1920);
+      bottom: percent(-275, 1405);
+      right: percent(73, 1920);
     }
 
     img {
