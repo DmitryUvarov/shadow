@@ -21,7 +21,6 @@ textarea {
   font-family: Helvetica;
   @include adaptiveValue("font-size", 19, 18);
   font-weight: 400;
-  line-height: 115.8%; /* 22/19 */
 
   &._form-focus {
   }

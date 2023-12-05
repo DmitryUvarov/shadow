@@ -14,10 +14,8 @@
 
   color: #fff;
   font-family: Helvetica;
-  @include adaptiveValue("font-size", 22, 18);
+  @include adaptiveValue("font-size", 20, 18);
   font-weight: 400;
-  line-height: 100%; /* 22/22 */
-
   transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
@@ -38,6 +36,33 @@
         background: #fe0000;
         box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.35);
       }
+    }
+  }
+}
+
+//========================================================================================================================================================
+
+.button-line {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px toRem(20);
+
+  @include adaptiveValue("height", 64, 48);
+  border-radius: 50px;
+  background: transparent;
+  border: toRem(1) solid #fff;
+
+  color: #fff;
+  font-family: Helvetica;
+  @include adaptiveValue("font-size", 20, 18);
+  font-weight: 400;
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #fff;
+      color: #000;
+      box-shadow: 0px 1px 17px 0px rgba(0, 0, 0, 0.35);
     }
   }
 }
