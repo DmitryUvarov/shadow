@@ -163,3 +163,57 @@
 }
 
 //========================================================================================================================================================
+
+.numbers-block {
+  position: relative;
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 235, 50);
+  &__container {
+    & > * {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 40);
+    }
+  }
+
+  &__decor {
+  }
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(toRem(345), 1fr));
+  @include adaptiveValue("gap", 30, 15);
+  &__item {
+  }
+}
+.item-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include adaptiveValue("gap", 17, 5);
+  text-align: center;
+  &__num {
+    color: #fe0000;
+    @include adaptiveValue("font-size", 120, 55);
+    font-weight: 700;
+    line-height: 116.7%; /* 140/120 */
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 25, 20);
+    line-height: 120%; /* 30/25 */
+
+    @media (max-width: $mobile) {
+      max-width: toRem(300);
+    }
+  }
+}
+
+//========================================================================================================================================================

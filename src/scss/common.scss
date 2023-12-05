@@ -48,15 +48,15 @@
     }
 
     &_6 {
-      width: percent(310, 1920);
-      top: percent(235, 1080);
-      left: percent(-107, 1920);
+      width: percent(401, 1920);
+      left: percent(68, 1920);
+      top: percent(217, 675);
     }
 
     &_7 {
-      width: percent(271, 1920);
-      bottom: percent(158, 1080);
-      right: percent(-90, 1920);
+      width: percent(375, 1920);
+      top: percent(-25, 675);
+      right: percent(120, 1920);
     }
 
     &_8 {
@@ -84,7 +84,7 @@
   font-family: Helvetica;
   @include adaptiveValue("font-size", 55, 35);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 100%; /* 100% */
   text-transform: uppercase;
   &_white {
