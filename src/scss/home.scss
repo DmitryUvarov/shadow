@@ -509,7 +509,10 @@
 
 .contacts {
   @include adaptiveValue("padding-top", 120, 35);
-  @include adaptiveValue("padding-bottom", 100, 40);
+  @include adaptiveValue("padding-bottom", 60, 40);
+
+  background-repeat: no-repeat;
+
   &__container {
     display: grid;
     @include adaptiveValue("gap", 70, 45);
@@ -632,6 +635,9 @@
 //========================================================================================================================================================
 
 .readmore {
+  @include adaptiveValue("padding-top", 60, 35);
+  @include adaptiveValue("padding-bottom", 100, 40);
+
   &__title {
     max-width: toRem(753);
     @include adaptiveValue("margin-bottom", 57, 30);
