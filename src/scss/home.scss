@@ -1,3 +1,84 @@
 //====================================================================================================
 
+.hero {
+  position: relative;
+  &__container {
+  }
+
+  &__body {
+    position: relative;
+    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-bottom", 120, 40);
+
+    min-height: toRem(1080);
+
+    @media (max-width: $tablet) {
+      min-height: calc(100svh - var(--header-height));
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    & > * {
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 120, 45);
+    line-height: 108.3%; /* 130/120 */
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 20);
+    }
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 25, 18);
+    line-height: 120%; /* 30/25 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 55, 30);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    @include adaptiveValue("gap", 20, 15);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      margin-top: auto;
+    }
+  }
+
+  &__button {
+    @media (min-width: $tablet) {
+      min-width: toRem(360);
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    bottom: toRem(210);
+    right: toRem(146);
+    z-index: 1;
+
+    width: percent(213, 1180);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__decor {
+    @media (max-width: $tablet) {
+      opacity: 0.7;
+    }
+  }
+}
+
 //====================================================================================================
