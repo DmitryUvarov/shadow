@@ -583,3 +583,76 @@
     line-height: 120%;
   }
 }
+
+//========================================================================================================================================================
+.whyus {
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 110, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+    text-align: start;
+  }
+
+  &__items {
+    counter-reset: whyus;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(400), 1fr));
+    @include adaptiveValue("gap", 20, 15);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+}
+
+.item-whyus {
+  padding: toRem(40) toRem(25) toRem(40) toRem(30);
+  background: #1b1b1e;
+  display: flex;
+  gap: toRem(15);
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    padding: toRem(25) toRem(20) toRem(30);
+  }
+  &::before {
+    content: counter(whyus, decimal-leading-zero) ".";
+    counter-increment: whyus;
+
+    color: #fe0000;
+    @include adaptiveValue("font-size", 65, 40);
+    font-weight: 700;
+    line-height: 100%; /* 33.846% */
+
+    @media (min-width: $mobile) {
+      flex: 0 0 toRem(100);
+      @include adaptiveValue("flex-basis", 100, 50);
+    }
+  }
+  &__body {
+    @media (min-width: $mobile) {
+      padding-top: toRem(20);
+    }
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 22, 20);
+    font-weight: 700;
+    line-height: 120%; /* 100% */
+
+    @include adaptiveValue("margin-bottom", 30, 15);
+  }
+
+  &__text {
+    color: #858585;
+    @include adaptiveValue("font-size", 19, 18);
+    line-height: 136.8%; /* 26/19 */
+  }
+}
