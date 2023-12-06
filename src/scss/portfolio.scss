@@ -1,0 +1,61 @@
+.portfolio-page {
+  @include adaptiveValue("padding-top", 75, 35);
+  @include adaptiveValue("padding-bottom", 150, 45);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 35, 30);
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: toRem(9);
+    @include adaptiveValue("margin-bottom", 50, 35);
+  }
+
+  &__link {
+    @include adaptiveValue("padding-top", 13, 10);
+    @include adaptiveValue("padding-bottom", 13, 10);
+    @include adaptiveValue("padding-left", 27, 15);
+    @include adaptiveValue("padding-right", 27, 15);
+    border-radius: toRem(30);
+    border: 1px solid #2b2b2b;
+    transition: all 0.3s ease 0s;
+
+    color: #2b2b2b;
+    font-family: Helvetica;
+    @include adaptiveValue("font-size", 19, 16);
+    line-height: 100%; /* 115.789% */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: #fe0000;
+        border-color: #fe0000;
+        color: #fff;
+      }
+    }
+
+    &.active {
+      background-color: #fe0000;
+      border-color: #fe0000;
+      color: #fff;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(345), 1fr));
+    @include adaptiveValue("gap", 20, 15);
+  }
+
+  &__item {
+  }
+}
