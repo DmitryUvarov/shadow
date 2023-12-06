@@ -484,3 +484,102 @@
     line-height: 136.4%; /* 30/22 */
   }
 }
+
+//========================================================================================================================================================
+
+.stages {
+  position: relative;
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 90, 35);
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 50, 35);
+    text-align: start;
+    max-width: toRem(700);
+  }
+
+  &__items {
+    counter-reset: num;
+    display: flex;
+    column-gap: toRem(15);
+    justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: toRem(20);
+    }
+
+    @media (max-width: em(660)) {
+      grid-template-columns: 1fr;
+    }
+
+    position: relative;
+    @media (min-width: $tablet) {
+      padding-top: toRem(100);
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: toRem(85);
+        top: 0;
+        left: 0;
+        background-image: url("@img/stages/progress.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__item {
+  }
+
+  &__bg-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.item-stages {
+  @media (min-width: em(660)) {
+    max-width: toRem(193);
+  }
+  @media (min-width: $tablet) {
+    &:nth-child(even) {
+      margin-top: toRem(-20);
+    }
+  }
+
+  &::before {
+    content: counter(num, decimal-leading-zero);
+    counter-increment: num;
+    color: #fe0000;
+    font-size: toRem(25);
+    font-weight: 700;
+    display: block;
+    margin-bottom: toRem(5);
+  }
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 22, 20);
+    font-weight: 700;
+    line-height: 136.4%; /* 30/22 */
+
+    margin-bottom: toRem(12);
+  }
+
+  &__text {
+    color: #b0b0b0;
+    @include adaptiveValue("font-size", 19, 18);
+    line-height: 120%;
+  }
+}
