@@ -311,3 +311,72 @@
     margin-top: auto;
   }
 }
+
+//========================================================================================================================================================
+
+.say {
+  position: relative;
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 200, 45);
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    text-align: start;
+    max-width: toRem(744);
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__form {
+    width: 100%;
+    @media (min-width: $mobile) {
+      max-width: toRem(580);
+    }
+  }
+
+  &__bg-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.form-say {
+  &__groop {
+    @include adaptiveValue("margin-bottom", 25, 20);
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 21, 20);
+    font-weight: 700;
+    line-height: 104.8%; /* 22/21 */
+
+    @include adaptiveValue("margin-bottom", 25, 15);
+  }
+
+  &__input {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 15, 10);
+    }
+  }
+
+  &__button {
+    @include adaptiveValue("margin-top", 15, 10);
+    min-width: toRem(245);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}

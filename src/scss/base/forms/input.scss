@@ -27,9 +27,23 @@ textarea {
   &._form-error {
   }
 
+  &::placeholder {
+    color: #686868;
+  }
   &:focus {
     border-color: #000;
     outline: none;
+  }
+
+  &_dark {
+    background-color: #2b2b2b;
+    border-color: #2b2b2b;
+
+    &:focus {
+      border-color: #fff;
+      outline: none;
+      color: #fff;
+    }
   }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
