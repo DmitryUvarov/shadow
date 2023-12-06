@@ -154,6 +154,10 @@
   flex-direction: column;
   transition: all 0.3s ease 0s;
 
+  @media (max-width: $mobile) {
+    padding: toRem(20) toRem(15) toRem(30);
+  }
+
   @media (any-hover: hover) {
     &:hover {
       color: #fff;
@@ -205,6 +209,105 @@
   }
 
   &__link {
+    margin-top: auto;
+  }
+}
+
+//========================================================================================================================================================
+
+.task {
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 90, 35);
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(345), 1fr));
+    @include adaptiveValue("gap", 20, 15);
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 30, 25);
+    text-align: start;
+    max-width: toRem(600);
+  }
+
+  &__text {
+    color: #686868;
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: 110%; /* 22/20 */
+
+    max-width: toRem(545);
+  }
+}
+.item-task {
+  background-color: #1b1b1e;
+
+  padding: toRem(22) toRem(30) toRem(50);
+
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("gap", 105, 20);
+
+  @media (max-width: $mobile) {
+    padding: toRem(20) toRem(15) toRem(30);
+  }
+  &_big {
+    @media (min-width: $mobile) {
+      grid-column: span 2;
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+    }
+    background-color: transparent;
+    gap: 0;
+    padding: toRem(45) 0 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    @include adaptiveValue("gap", 25, 15);
+  }
+
+  &__ico {
+    @include adaptiveValue("width", 68, 45);
+    @include adaptiveValue("height", 68, 45);
+    background-color: #fe0000;
+    border-radius: 50%;
+    flex-shrink: 0;
+    padding: toRem(10);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    @include adaptiveValue("font-size", 24, 22);
+    font-weight: 700;
+    line-height: 104.2%; /* 25/24 */
+  }
+
+  &__text {
+    color: #858585;
+    @include adaptiveValue("font-size", 19, 18);
+    line-height: 136.8%; /* 26/19 */
+
+    flex: 1 1 auto;
     margin-top: auto;
   }
 }
