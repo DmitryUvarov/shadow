@@ -635,10 +635,11 @@
 
 //========================================================================================================================================================
 
-.readmore {
+section.readmore {
   @include adaptiveValue("padding-top", 60, 35);
   @include adaptiveValue("padding-bottom", 100, 40);
-
+}
+.readmore {
   &__title {
     max-width: toRem(753);
     @include adaptiveValue("margin-bottom", 57, 30);

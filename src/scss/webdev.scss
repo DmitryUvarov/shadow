@@ -314,10 +314,13 @@
 
 //========================================================================================================================================================
 
-.say {
-  position: relative;
+section.say {
   @include adaptiveValue("padding-top", 90, 35);
   @include adaptiveValue("padding-bottom", 200, 45);
+}
+.say {
+  position: relative;
+
   &__container {
     position: relative;
     z-index: 2;
@@ -331,13 +334,30 @@
 
   &__body {
     display: flex;
-    justify-content: flex-end;
+    @include adaptiveValue("gap", 30, 20);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(575, 1180);
+    height: fit-content;
+
+    @media (max-width: $pc) {
+      flex-grow: 1;
+      padding-bottom: percent(240, 345);
+    }
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(500, 1180);
+    }
   }
 
   &__form {
-    width: 100%;
     @media (min-width: $mobile) {
-      max-width: toRem(580);
+      margin-left: auto;
+      flex: 0 0 percent(580, 1180);
     }
   }
 
@@ -363,6 +383,10 @@
     line-height: 104.8%; /* 22/21 */
 
     @include adaptiveValue("margin-bottom", 25, 15);
+
+    &_dark {
+      color: #2b2b2b;
+    }
   }
 
   &__input {
