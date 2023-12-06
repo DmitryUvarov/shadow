@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Портфолио - внутренняя страница"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="portfolio-article text-bg">
+                <div class="portfolio-article__container">
+                    <h4 class="portfolio-article__title title">Жилой Комплекс «Nobel»</h4>
+                    <a href="#" target="_blank" class="portfolio-article__link _icon-link">Перейти на сайт</a>
+
+                    <div class="portfolio-article__body">
+                        <div class="portfolio-article__col">
+                            <div class="portfolio-article__subtitle">О проекте</div>
+                            <div class="portfolio-article__text">Печатное или электронное издание, дающее потенциальным покупателям представление об ассортименте продукции, товаре или услуге. Дизайн каталога должен подчёркивать достоинства товара. Нередко каталоги снабжают таблицами, схемами и другой инфографикой. Часто при разработке дизайна каталога требуется постановочная студийная фотосъёмка.Брошюра — многостраничное издание с описанием продукта, услуги или процесса, в ней может рассказываться о событии или месте и т. д. Чаще всего брошюра не несёт прямого рекламного посыла. В брошюре определяющим чаще всего является текст, что не исключает наличия иллюстраций и полиграфических изысков.
+                                Стоимость изготовления каталогов и брошюр зависит от многих переменных и считается индивидуально. Окончательную стоимость уточняйте у менеджера.</div>
+                        </div>
+                        <div class="portfolio-article__col">
+                            <div class="portfolio-article__subtitle">УСЛУГИ</div>
+                            <ul class="portfolio-article__text">
+                                <li>Разработка сайта</li>
+                                <li>Разработка сайта</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-article__images">
+                        <div class="portfolio-article__image-ibg big"><img src="@img/portfolio-article/01.jpg" alt=""></div>
+                        <div class="portfolio-article__image-ibg"><img src="@img/portfolio-article/02.jpg" alt=""></div>
+                        <div class="portfolio-article__image-ibg"><img src="@img/portfolio-article/03.jpg" alt=""></div>
+                    </div>
+
+                    <a href="#" target="_blank" class="portfolio-article__button button">Перейти на сайт</a>
+
+                </div>
+            </section>
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

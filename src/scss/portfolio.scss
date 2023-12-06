@@ -27,7 +27,6 @@
     transition: all 0.3s ease 0s;
 
     color: #2b2b2b;
-    font-family: Helvetica;
     @include adaptiveValue("font-size", 19, 16);
     line-height: 100%; /* 115.789% */
 
@@ -57,5 +56,119 @@
   }
 
   &__item {
+  }
+}
+
+//========================================================================================================================================================
+
+.portfolio-article {
+  @include adaptiveValue("padding-top", 80, 35);
+  @include adaptiveValue("padding-bottom", 150, 45);
+  &__container {
+    display: grid;
+  }
+
+  &__title {
+    text-align: start;
+    margin-bottom: toRem(25);
+  }
+
+  &__link {
+    color: #858585;
+    @include adaptiveValue("font-size", 19, 18);
+    line-height: 22px; /* 115.789% */
+
+    display: flex;
+    align-items: center;
+    column-gap: toRem(8);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #fe0000;
+      }
+    }
+
+    &::before {
+      font-size: toRem(19);
+      color: #fe0000;
+    }
+  }
+
+  &__body {
+    @include adaptiveValue("margin-top", 70, 40);
+
+    display: grid;
+
+    row-gap: toRem(20);
+    @include adaptiveValue("column-gap", 120, 20, 0, 1210, 991);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: percent(580, 1180) 1fr;
+    }
+  }
+
+  &__col {
+  }
+
+  &__subtitle {
+    color: #1b1b1e;
+    @include adaptiveValue("font-size", 40, 28);
+    font-weight: 700;
+    line-height: 100%; /* 100% */
+    text-transform: uppercase;
+
+    @include adaptiveValue("margin-bottom", 37, 20);
+  }
+
+  &__text {
+    color: #686868;
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: 110%; /* 22/20 */
+
+    p {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 20, 15);
+      }
+    }
+    li {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 10, 8);
+      }
+    }
+  }
+
+  &__images {
+    @include adaptiveValue("margin-top", 55, 35);
+
+    display: grid;
+    @include adaptiveValue("column-gap", 20, 15);
+    @include adaptiveValue("row-gap", 35, 20);
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(550, 580);
+
+    &.big {
+      @media (min-width: $mobile) {
+        grid-column: span 2;
+        padding-bottom: percent(550, 1180);
+      }
+      @media (max-width: $mobile) {
+        padding-bottom: percent(160, 345);
+      }
+    }
+  }
+
+  &__button {
+    align-self: center;
+    @include adaptiveValue("margin-top", 65, 35);
+    min-width: toRem(245);
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
   }
 }
