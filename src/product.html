@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Полиграфия"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="page">
+
+            <section class="product text-bg">
+
+                <div class="product__container">
+                    <div class="product__body">
+                        <div class="product__image"><img src="@img/product/01.jpg" alt=""></div>
+                        <div class="product__content">
+                            <h1 class="product__title">КАТАЛОГИ, БРОШЮРЫ</h1>
+                            <div class="product__text">
+                                <p>Каталог — печатное или электронное издание, дающее потенциальным покупателям представление об ассортименте продукции, товаре или услуге. Дизайн каталога должен подчёркивать достоинства товара. Нередко каталоги снабжают таблицами, схемами и другой инфографикой. Часто при разработке дизайна каталога требуется постановочная студийная фотосъёмка.Брошюра — многостраничное издание с описанием продукта, услуги или процесса, в ней может рассказываться о событии или месте и т. д. Чаще всего брошюра не несёт прямого рекламного посыла. В брошюре определяющим чаще всего является текст, что не исключает наличия иллюстраций и полиграфических изысков.
+                                    Стоимость изготовления каталогов и брошюр зависит от многих переменных и считается индивидуально. Окончательную стоимость уточняйте у менеджера.</p>
+                            </div>
+                            <button class="product__button button">Рассчитать стоимость</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="say">
+                    <div class="say__container">
+                        <h4 class="say__title title">РАССКАЖИТЕ О СВОЕЙ ЗАДАЧЕ</h4>
+                        <div class="say__body">
+                            <div class="say__image-ibg"><img src="@img/say/01.jpg" alt=""></div>
+                            <form action="#" class="say__form form-say">
+                                <div class="form-say__groop">
+                                    <div class="form-say__title form-say__title_dark">Контактные данные</div>
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input">
+                                </div>
+                                <button type="submit" class="form-say__button button">Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="readmore">
+                    <div class="readmore__container">
+                        <h4 class="readmore__title title">ПРОДВИЖЕНИЕ БИЗНЕСА
+                            с SHADOW</h4>
+                        <div class="readmore__body">
+                            <div class="readmore__image-ibg"><img src="@img/readmore/01.jpg" alt=""></div>
+                            <div data-showmore="items" class="readmore__showmore showmore">
+                                <div data-showmore-content="1" class="showmore__content">
+                                    <p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса. Мы проведем анализ рынка и конкурентов, чтобы определить самые эффективные каналы продвижения и создать уникальное предложение, которое будет привлекать Вашу целевую аудиторию.</p>
+                                    <p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса.</p>
+                                </div>
+                                <button hidden data-showmore-button type="button" class="showmore__more"><span>Подробнее</span><span>Скрыть</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+        </main>
+        @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+</body>
+
+</html>

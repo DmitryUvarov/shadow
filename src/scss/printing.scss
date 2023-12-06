@@ -79,3 +79,87 @@
   &__link {
   }
 }
+
+//========================================================================================================================================================
+
+.product {
+  display: grid;
+  @include adaptiveValue("gap", 130, 45);
+  padding-top: toRem(35);
+  @include adaptiveValue("padding-bottom", 200, 45);
+
+  background-position-y: toRem(60);
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    column-gap: toRem(20);
+    row-gap: toRem(20);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    @media (min-width: $pc) {
+      flex-grow: 0;
+    }
+
+    @media (min-width: $mobile) {
+      height: fit-content;
+      flex: 0 0 percent(480, 1180);
+      padding-bottom: percent(577, 1180);
+      flex-grow: 1;
+    }
+
+    img {
+      @media (min-width: $mobile) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+      }
+      @media (max-width: $mobile) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    flex: 0 0 percent(580, 1180);
+  }
+
+  &__title {
+    color: #000;
+    @include adaptiveValue("font-size", 40, 25);
+    font-weight: 700;
+    line-height: 137.5%; /* 55/40 */
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 30, 20);
+    }
+  }
+
+  &__text {
+    color: #686868;
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: 110%; /* 22/20 */
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 50, 30);
+    }
+  }
+
+  &__button {
+    min-width: toRem(332);
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+}
