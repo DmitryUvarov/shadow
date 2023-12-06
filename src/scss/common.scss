@@ -105,6 +105,36 @@
 }
 
 //========================================================================================================================================================
+
+.link {
+  color: #fff;
+  font-family: Helvetica;
+  @include adaptiveValue("font-size", 19, 18);
+  font-weight: 700;
+  line-height: 136.8%; /* 26/19 */
+
+  display: inline-flex;
+  align-items: center;
+  column-gap: toRem(13);
+
+  @media (any-hover: hover) {
+    &:hover {
+      &::after {
+        @include adaptiveValue("width", 90, 50);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    @include adaptiveValue("width", 67, 35);
+    height: 2px;
+    display: inline-block;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+}
+
 //========================================================================================================================================================
 //========================================================================================================================================================
 
