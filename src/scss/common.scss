@@ -21,30 +21,50 @@
       width: percent(331, 1920);
       top: percent(34, 1080);
       left: percent(40, 1920);
+
+      @media (max-width: em(660)) {
+        width: 25%;
+      }
     }
 
     &_2 {
       width: percent(406, 1920);
       top: percent(75, 1080);
       right: percent(224, 1920);
+
+      @media (max-width: em(660)) {
+        width: 30%;
+      }
     }
 
     &_3 {
       width: percent(315, 1920);
       top: percent(595, 1080);
       left: percent(135, 1920);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
     &_4 {
       width: percent(366, 1920);
       bottom: percent(-97, 1080);
       left: percent(650, 1920);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
     &_5 {
       width: percent(377, 1920);
       right: percent(95, 1920);
       bottom: percent(140, 1080);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
     &_6 {
