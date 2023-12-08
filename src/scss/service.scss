@@ -1,0 +1,81 @@
+.works {
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 150, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("gap", 20, 15, 0, 1210, 767);
+    }
+    @media (max-width: $mobile) {
+      gap: toRem(8);
+
+      margin: 0 toRem(-10);
+    }
+  }
+
+  &__image-ibg {
+    flex: 1 1 calc(50% - toRem(10));
+    padding-bottom: percent(440, 1180);
+    &.small {
+      flex: 0 1 percent(233, 1180);
+    }
+    &.center {
+      flex: 0 1 calc(57% - toRem(14));
+    }
+  }
+}
+
+//========================================================================================================================================================
+.works-smm {
+  @include adaptiveValue("padding-top", 90, 35);
+  @include adaptiveValue("padding-bottom", 150, 40);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 70, 35);
+  }
+
+  &__items {
+    display: grid;
+    @include adaptiveValue("gap", 20, 15);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(450), 1fr));
+    }
+  }
+  &__image-ibg {
+    padding-bottom: percent(401, 579);
+    position: relative;
+    z-index: 2;
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(254, 0, 0, 0.75);
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}

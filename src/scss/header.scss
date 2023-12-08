@@ -140,7 +140,15 @@
       font-size: toRem(15);
       transition: transform 0.3s ease 0s;
 
-      .open & {
+      @media (min-width: $mobile) {
+        .open & {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &._spoller-active::before {
+      @media (max-width: $mobile) {
         transform: rotate(180deg);
       }
     }
