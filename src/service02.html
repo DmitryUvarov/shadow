@@ -31,7 +31,7 @@
                                 <p>Мы поможем вам создать и настроить контекстную рекламу, чтобы ваше объявление было показано именно тем людям, которые ищут товары или услуги, связанные с вашим бизнесом.</p>
                             </div>
                             <div class="screen__buttons">
-                                <button class="screen__button button">Обсудить проект</button>
+                                <button class="screen__button button" data-popup="#popup">Обсудить проект</button>
                             </div>
                         </div>
                     </div>
@@ -228,6 +228,7 @@
 
         </main>
         @@include('html/_footer.htm',{})
+        @@include('html/_popup.htm',{})
     </div>
     @@include('html/_js.htm',{})
 </body>

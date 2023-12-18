@@ -1,10 +1,24 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
+			<button data-close type="button" class="popup__close _icon-close"></button>
+
+			<div class="popup__title title">РАССКАЖИТЕ О СВОЕЙ ЗАДАЧЕ</div>
+
+			<div class="popup__image"><img src="@img/popup/shadow.png" alt=""></div>
+			<div class="popup__body">
+
+				<form action="#" class="popup__form form-say">
+					<div class="form-say__groop">
+						<div class="form-say__title form-say__title_dark">Контактные данные</div>
+						<input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input">
+						<input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input">
+					</div>
+					<button type="submit" class="form-say__button button">Отправить</button>
+				</form>
+
 			</div>
+
 		</div>
 	</div>
 </div>
