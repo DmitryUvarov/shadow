@@ -366,7 +366,7 @@
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -388,6 +388,7 @@
 
   &__place {
     font-weight: 800;
+    @include adaptiveValue("margin-bottom", 30, 20);
   }
 
   &__name {
@@ -590,10 +591,13 @@
   }
 
   &__map {
-    flex: 0 0 percent(488, 1180);
+    display: block;
     position: relative;
     padding-bottom: percent(415, 1180);
 
+    @media (min-width: $mobile) {
+      flex: 0 0 percent(488, 1180);
+    }
     @media (max-width: $mobile) {
       padding-bottom: percent(220, 345);
     }
@@ -636,6 +640,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(toRem(390), 1fr));
     @include adaptiveValue("gap", 20, 15);
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__input {

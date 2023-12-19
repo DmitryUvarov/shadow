@@ -22,6 +22,12 @@
       top: percent(34, 1080);
       left: percent(40, 1920);
 
+      @media (max-width: em(1550)) {
+        width: 12%;
+        top: toRem(10);
+        left: toRem(15);
+      }
+
       @media (max-width: em(660)) {
         width: 25%;
       }
@@ -70,7 +76,12 @@
     &_6 {
       width: percent(401, 1920);
       left: percent(68, 1920);
-      top: percent(217, 675);
+      // top: percent(217, 675);
+      bottom: toRem(35);
+
+      @media (max-width: $tablet) {
+        bottom: toRem(25);
+      }
     }
 
     &_7 {
