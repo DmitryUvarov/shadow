@@ -15,6 +15,7 @@
       background-color: #2b2b2b;
       z-index: 6;
       opacity: 0;
+      pointer-events: none;
 
       .menu-open & {
         opacity: 1;
@@ -56,6 +57,12 @@
 }
 
 .menu {
+  @media (max-width: $mobile) {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+  }
+
   &__body {
     @media (max-width: $mobile) {
       position: fixed;
@@ -214,6 +221,14 @@
   }
 
   &__icon {
+  }
+
+  &__button {
+    @media (min-width: $mobile) {
+      display: none;
+    }
+    font-size: toRem(17);
+    height: toRem(40);
   }
 }
 

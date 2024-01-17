@@ -45,6 +45,10 @@
 
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 55, 30);
+
+      @media (max-width: $mobile) {
+        margin-bottom: toRem(120);
+      }
     }
   }
 
@@ -57,7 +61,7 @@
     }
     @media (max-width: $mobile) {
       flex-direction: column;
-      margin-top: auto;
+      // margin-top: auto;
       align-items: center;
     }
   }
@@ -196,6 +200,10 @@
     &:not(:last-child) {
       @include adaptiveValue("margin-bottom", 70, 40);
     }
+
+    @media (max-width: $mobile) {
+      text-align: start;
+    }
   }
 
   &__decor {
@@ -206,6 +214,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(toRem(345), 1fr));
   @include adaptiveValue("gap", 30, 15);
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
   &__item {
   }
 }
@@ -215,16 +227,25 @@
   align-items: center;
   @include adaptiveValue("gap", 17, 5);
   text-align: center;
+
+  @media (max-width: $mobile) {
+    text-align: start;
+    align-items: flex-start;
+  }
+
   &__num {
     color: #fe0000;
     @include adaptiveValue("font-size", 120, 55);
     font-weight: 700;
     line-height: 116.7%; /* 140/120 */
-    text-transform: uppercase;
+    span {
+      text-transform: uppercase;
+    }
   }
 
   &__text {
-    @include adaptiveValue("font-size", 25, 20);
+    // @include adaptiveValue("font-size", 25, 22);
+    font-size: toRem(25);
     line-height: 120%; /* 30/25 */
 
     @media (max-width: $mobile) {
@@ -251,6 +272,7 @@
     @include adaptiveValue("gap", 28, 15);
     @media (max-width: $mobile) {
       flex-direction: column;
+      gap: toRem(50);
     }
 
     @include adaptiveValue("margin-bottom", 25, 10);
@@ -315,6 +337,10 @@
 
   &__title {
     @include adaptiveValue("margin-bottom", 70, 35);
+
+    @media (max-width: $mobile) {
+      text-align: start;
+    }
   }
 
   &__numbers {
@@ -337,9 +363,9 @@
     column-gap: toRem(20);
     row-gap: toRem(25);
 
-    @media (min-width: $mobile) {
-      //   grid-template-columns: repeat(auto-fill, minmax(toRem(500), 1fr));
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    @media (max-width: $mobile) {
+      gap: toRem(0);
     }
   }
 
@@ -376,6 +402,7 @@
     text-align: center;
     text-transform: uppercase;
     @include adaptiveValue("font-size", 24, 20);
+
     line-height: 120%;
 
     @include adaptiveValue("padding-left", 130, 50);
@@ -384,11 +411,21 @@
     transition: all 0.3s ease 0s;
     opacity: 0;
     user-select: none;
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue("font-size", 24, 15, 0, 767, 375);
+      padding-left: toRem(15);
+      padding-right: toRem(15);
+    }
   }
 
   &__place {
     font-weight: 800;
     @include adaptiveValue("margin-bottom", 30, 20);
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue("margin-bottom", 30, 10, 0, 767, 375);
+    }
   }
 
   &__name {
@@ -465,7 +502,8 @@
     }
 
     &:not(:last-child) {
-      @include adaptiveValue("padding-bottom", 50, 25);
+      // @include adaptiveValue("padding-bottom", 50, 25);
+      padding-bottom: toRem(50);
     }
 
     &::before {
