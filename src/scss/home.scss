@@ -401,16 +401,18 @@
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    @include adaptiveValue("font-size", 24, 20);
 
     line-height: 120%;
-
-    @include adaptiveValue("padding-left", 130, 50);
-    @include adaptiveValue("padding-right", 130, 50);
 
     transition: all 0.3s ease 0s;
     opacity: 0;
     user-select: none;
+
+    @media (min-width: $mobile) {
+      @include adaptiveValue("font-size", 24, 20);
+      @include adaptiveValue("padding-left", 130, 50);
+      @include adaptiveValue("padding-right", 130, 50);
+    }
 
     @media (max-width: $mobile) {
       @include adaptiveValue("font-size", 24, 15, 0, 767, 375);
