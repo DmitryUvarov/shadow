@@ -1,20 +1,21 @@
 .portfolio-page {
-  @include adaptiveValue("padding-top", 75, 35);
-  @include adaptiveValue("padding-bottom", 150, 45);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 45);
   &__container {
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 35, 30);
+    // @include adaptiveValue("margin-bottom", 35, 30);
+    margin-bottom: toRem(20);
   }
 
   &__links {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: toRem(9);
-    @include adaptiveValue("margin-bottom", 50, 35);
+    @include adaptiveValue("margin-bottom", 60, 35);
   }
 
   &__link {

@@ -1,11 +1,4 @@
 @font-face {
-	font-family: Helvetica;
-	font-display: swap;
-	src: url("../fonts/Helvetica-Bold.woff2") format("woff2"), url("../fonts/Helvetica-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
 	font-family: Benzin;
 	font-display: swap;
 	src: url("../fonts/Benzin-Bold.woff2") format("woff2"), url("../fonts/Benzin-Bold.woff") format("woff");
@@ -13,17 +6,24 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Helvetica;
+	font-family: Gilroy;
 	font-display: swap;
-	src: url("../fonts/Helvetica-Light.woff2") format("woff2"), url("../fonts/Helvetica-Light.woff") format("woff");
-	font-weight: 300;
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: Helvetica;
+	font-family: Gilroy;
 	font-display: swap;
-	src: url("../fonts/Helvetica-Regular.woff2") format("woff2"), url("../fonts/Helvetica-Regular.woff") format("woff");
-	font-weight: 400;
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: Gilroy;
+	font-display: swap;
+	src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+	font-weight: 600;
 	font-style: normal;
 }
 @font-face {

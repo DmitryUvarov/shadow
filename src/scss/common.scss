@@ -17,6 +17,16 @@
     z-index: 2;
     pointer-events: none;
 
+    img {
+      .loaded & {
+        transition:
+          transform 0.8s ease 0s,
+          opacity 0.8s ease 0s;
+        transform: translate(0, 0) rotate(0);
+        opacity: 1;
+      }
+    }
+
     &_1 {
       width: percent(331, 1920);
       top: percent(34, 1080);
@@ -38,12 +48,17 @@
       @media (max-width: em(660)) {
         // width: 25%;
       }
+
+      img {
+        transform: translate(-300px, -400px) rotate(-65deg);
+        opacity: 0;
+      }
     }
 
     &_2 {
-      width: percent(406, 1920);
-      top: percent(75, 1080);
-      right: percent(224, 1920);
+      width: percent(375, 1920);
+      top: percent(21, 1080);
+      right: percent(144, 1920);
 
       @media (max-width: $mobile) {
         width: toRem(200);
@@ -57,43 +72,63 @@
       @media (max-width: em(660)) {
         // width: 30%;
       }
+
+      img {
+        transform: translate(100px, -200px) rotate(55deg);
+        opacity: 0;
+      }
     }
 
     &_3 {
-      width: percent(315, 1920);
-      top: percent(595, 1080);
-      left: percent(135, 1920);
+      width: percent(245, 1920);
+      top: percent(555, 1080);
+      left: percent(111, 1920);
 
       @media (max-width: $mobile) {
         display: none;
+      }
+
+      img {
+        transform: translate(-50px, -20px) rotate(-15deg);
+        opacity: 0;
       }
     }
 
     &_4 {
-      width: percent(366, 1920);
-      bottom: percent(-97, 1080);
-      left: percent(650, 1920);
+      width: percent(310, 1920);
+      bottom: percent(-150, 1080);
+      left: percent(618, 1920);
 
       @media (max-width: $mobile) {
         display: none;
+      }
+
+      img {
+        transform: translate(-50px, 150px) rotate(-15deg);
+        opacity: 0;
       }
     }
 
     &_5 {
-      width: percent(377, 1920);
-      right: percent(95, 1920);
-      bottom: percent(140, 1080);
+      width: percent(330, 1920);
+      right: percent(102, 1920);
+      bottom: percent(75, 1080);
 
       @media (max-width: $mobile) {
         display: none;
       }
+
+      img {
+        transform: translate(350px, 350px) rotate(-75deg);
+        opacity: 0;
+      }
     }
 
     &_6 {
-      width: percent(401, 1920);
-      left: percent(68, 1920);
+      width: percent(310, 1920);
+      left: percent(30, 1920);
       // top: percent(217, 675);
-      bottom: toRem(35);
+      bottom: toRem(-5);
 
       @media (max-width: $tablet) {
         bottom: toRem(25);
@@ -103,27 +138,45 @@
     }
 
     &_7 {
-      width: percent(375, 1920);
-      top: percent(-25, 675);
-      right: percent(120, 1920);
+      width: percent(415, 1920);
+      top: percent(-5, 675);
+      right: percent(0, 1920);
     }
 
     &_8 {
-      width: percent(364, 1920);
-      top: percent(0, 1405);
-      right: percent(215, 1920);
+      width: percent(422, 1920);
+      top: percent(-3, 1643);
+      right: percent(505, 1920);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
     &_9 {
-      width: percent(315, 1920);
-      top: percent(697, 1405);
-      right: percent(27, 1920);
+      width: percent(252, 1920);
+      top: percent(665, 1643);
+      right: percent(90, 1920);
     }
 
     &_10 {
-      width: percent(490, 1920);
-      bottom: percent(-275, 1405);
-      right: percent(73, 1920);
+      width: percent(537, 1920);
+      bottom: percent(-305, 1643);
+      right: percent(37, 1920);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+
+    &_11 {
+      width: percent(433, 1920);
+      top: percent(408, 1643);
+      right: percent(62, 1920);
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
 
     img {
@@ -141,12 +194,12 @@
 
 .title {
   color: #000;
-  text-align: center;
-  font-family: Helvetica;
+  // text-align: center;
+  font-family: Benzin;
   @include adaptiveValue("font-size", 55, 35);
   font-style: normal;
-  font-weight: 700;
-  line-height: 100%; /* 100% */
+  font-weight: 400;
+  line-height: 129.1%; /* 71/55 */
   text-transform: uppercase;
   &_white {
     color: #fff;
@@ -200,3 +253,16 @@
 // }
 
 //========================================================================================================================================================
+
+[data-watch] {
+  .watcher & {
+    transform: translateY(toRem(100));
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+
+    &._watcher-view {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

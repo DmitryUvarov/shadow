@@ -33,55 +33,48 @@
 				</div>
 			</section>
 
-			<section class="video">
-				<video autoplay loop muted playsinline>
-					<source src="files/video.webm" type="video/webm">
-					<source src="files/video.mp4" type="video/mp4">
-				</video>
-			</section>
-
 			<section class="doing">
 				<div class="doing__container">
-					<h2 class="doing__title title title_white">ЧТО МЫ ДЕЛАЕМ</h2>
+					<h2 class="doing__title title title_white" data-watch data-watch-threshold="0.3" data-watch-once>ЧТО МЫ ДЕЛАЕМ</h2>
 					<div class="doing__items">
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/01.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/01.png" alt=""></div>
 							<h4 class="item-doing__title">Медиа</h4>
 							<p class="item-doing__text">Разрабатываем креативную концепцию, собираем редакцию, развиваем площадку</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/02.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/02.png" alt=""></div>
 							<h4 class="item-doing__title">Спецпроекты</h4>
 							<p class="item-doing__text">Пишем тексты и креативы любой конфигурации и сложности которые, решают задачи партнёра</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/03.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/03.png" alt=""></div>
 							<h4 class="item-doing__title">Подкасты</h4>
 							<p class="item-doing__text">Помогаем партнёрам рассказать о себе</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/04.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/04.png" alt=""></div>
 							<h4 class="item-doing__title">Креатив</h4>
 							<p class="item-doing__text">Творческое переосмысление коммуникационного послания бренда, заданного в рамках коммуникационной стратегии</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/05.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/05.png" alt=""></div>
 							<h4 class="item-doing__title">Онлайн-курсы</h4>
 							<p class="item-doing__text">Разрабатываем и реализуем образовательные концепции</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/06.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/06.png" alt=""></div>
 							<h4 class="item-doing__title">Видеопродакшн</h4>
 							<p class="item-doing__text">Видеоролики.
 								Упаковываем нужные месседжи в легкие, креативные форматы</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/07.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/07.png" alt=""></div>
 							<h4 class="item-doing__title">Личный бренд</h4>
 							<p class="item-doing__text">Яркий признак сильного личного бренда — когда специалиста рекомендуют не только клиенты</p>
 						</div>
-						<div class="doing__item item-doing">
-							<div class="item-doing__ico"><img src="@img/doing/08.svg" alt=""></div>
+						<div class="doing__item item-doing" data-watch data-watch-threshold="0.3" data-watch-once>
+							<div class="item-doing__ico"><img src="@img/doing/08.png" alt=""></div>
 							<h4 class="item-doing__title">SMM</h4>
 							<p class="item-doing__text">Повышение узнаваемости бренда и работа над репутацией</p>
 						</div>
@@ -90,7 +83,15 @@
 				<div class="doing__bg-ibg"><img src="@img/doing/bg.jpg" alt=""></div>
 			</section>
 
-			<section class="numbers-block text-bg" data-prlx-mouse-wrapper>
+			<section class="video">
+				<video id="video" loop muted playsinline>
+					<source src="files/video.webm" type="video/webm">
+					<source src="files/video.mp4" type="video/mp4">
+				</video>
+				<button class="video__button"><img src="@img/play.svg" alt="" loading="lazy"></button>
+			</section>
+
+			<section class="numbers-block text-bg" data-prlx-mouse-wrapper data-watch data-watch-threshold="0.3" data-watch-once>
 				<div class="numbers-block__container">
 					<h2 class="numbers-block__title title">МЫ В ЦИФРАХ</h2>
 					<div class="numbers" data-watch>
@@ -116,12 +117,12 @@
 
 			<section class="portfolio">
 				<div class="portfolio__container">
-					<div class="portfolio__top">
+					<div class="portfolio__top" data-watch data-watch-threshold="0.3" data-watch-once>
 						<h2 class="portfolio__title title title_white">ПОРТФОЛИО</h2>
 						<div class="portfolio__text">*дополняется</div>
 					</div>
-					<div class="portfolio__text">Найдется местечко и для Вашего логотипа!</div>
-					<div class="portfolio__items">
+					<div class="portfolio__text" data-watch data-watch-threshold="0.3" data-watch-once>Найдется местечко и для Вашего логотипа!</div>
+					<div class="portfolio__items" data-watch data-watch-threshold="0.3" data-watch-once>
 						<div class="portfolio__wrapper swiper-wrapper">
 							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/01.png" alt=""></div>
 							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/02.png" alt=""></div>
@@ -143,23 +144,13 @@
 							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/18.png" alt=""></div>
 							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/19.png" alt=""></div>
 							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/20.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/21.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/22.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/23.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/24.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/25.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/26.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/27.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/28.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/29.png" alt=""></div>
-							<div class="portfolio__item swiper-slide"><img src="@img/portfolio/30.png" alt=""></div>
 						</div>
 					</div>
 				</div>
 				<div class="portfolio__bg-ibg"><img src="@img/portfolio/bg.jpg" alt=""></div>
 			</section>
 
-			<section class="facts text-bg">
+			<section class="facts text-bg" data-watch data-watch-threshold="0.3" data-watch-once>
 				<div class="facts__container">
 					<h4 class="facts__title title">ФАКТЫ О НАС</h4>
 
@@ -173,12 +164,12 @@
 							<div class="item-numbers__text">Потраченно трафика на мемасы</div>
 						</div>
 						<div class="numbers__item item-numbers">
-							<div class="item-numbers__num"><span data-digits-counter>2</span>+</div>
+							<div class="item-numbers__num"><span data-digits-counter>2</span></div>
 							<div class="item-numbers__text">глаза смотрят на этот факт</div>
 						</div>
 					</div>
 
-					<div class="facts__team team">
+					<div class="facts__team team" data-watch data-watch-threshold="0.3" data-watch-once>
 						<h4 class="team__title title">НАША КОМАНДА</h4>
 						<div class="team__items">
 							<div class="team__item item-team">
@@ -214,37 +205,40 @@
 					</div>
 
 				</div>
+				<div class="facts__decor decor">
+					<div class="decor__item decor__item_11" data-prlx-mouse data-prlx-cx="50" data-prlx-cy="75"><img src="@img/decor/11.png" alt=""></div>
+				</div>
 			</section>
 
 
 			<section class="process" data-prlx-mouse-wrapper>
 				<div class="process__container">
-					<h4 class="process__title title title_white">ПРОЦЕСС РАБОТЫ</h4>
+					<h4 class="process__title title title_white" data-watch data-watch-threshold="0.3" data-watch-once>ПРОЦЕСС РАБОТЫ</h4>
 					<div class="process__body">
 						<div class="process__image"><img src="@img/process/shadow.png" alt=""></div>
 						<div class="process__items">
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Разработка рекламной стратегии, учитывая все аспекты проекта</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Рекламный маркетинг, анализ рынка и коллаборация с потенциальными партнерами</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Комплексное присутствие проекта на социальных платформах</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Контент план (Составление графика публикаций с конкретной темой, датой и временем, которые расположены в определенной последовательности)</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Копирайтинг (Написание уникальных, информационных и продающих текстов)</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Комьюнити (Работа с аудиторией бренда)</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Фотосессия, промо ролики (Имиджевые фотографии продукта для социальных сетей)</div>
 							</div>
-							<div class="process__item">
+							<div class="process__item" data-watch data-watch-threshold="0.3" data-watch-once>
 								<div class="process__item-text">Графический дизайн (Разработка всех видов дизайнерских услуг)</div>
 							</div>
 						</div>
@@ -260,54 +254,60 @@
 
 			<section class="contacts text-bg">
 				<div class="contacts__container">
-					<div class="contacts__body">
-						<div class="contacts__content">
-							<h4 class="contacts__title title">СВЯЖИТЕСЬ С НАМИ</h4>
-							<div class="contacts__subtitle">Будем рады пообщаться</div>
-							<div class="contacts__line _icon-location">
-								<div class="contacts__line-body">
-									<div class="contacts__line-text">Республика Узбекистан, Ташкент, Яккасарайский район, Юсуф Хос Ходжа 73, ориентир ресторан Mona</div>
-									<div class="contacts__line-title">Понедельник - пятница, 10:00-18:00</div>
+					<div class="contacts__block" data-watch data-watch-threshold="0.3" data-watch-once>
+						<h4 class="contacts__title title">СВЯЖИТЕСЬ С НАМИ</h4>
+						<div class="contacts__subtitle">Будем рады пообщаться</div>
+						<div class="contacts__body">
+							<div class="contacts__content">
+								<div class="contacts__line _icon-location">
+									<div class="contacts__line-body">
+										<div class="contacts__line-text">Республика Узбекистан, Ташкент, Яккасарайский район, Юсуф Хос Ходжа 73, ориентир ресторан Mona</div>
+										<div class="contacts__line-title">Понедельник - пятница, 10:00-18:00</div>
+									</div>
 								</div>
 							</div>
+							<a href="https://www.google.ru/maps/place/30+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A8%D0%BE%D1%82%D0%B0+%D0%A0%D1%83%D1%81%D1%82%D0%B0%D0%B2%D0%B5%D0%BB%D0%B8,+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82+100070,+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@41.2917311,69.2601421,19z/data=!3m1!4b1!4m6!3m5!1s0x38ae8ae8fab6ea51:0x3c4707145cc069f7!8m2!3d41.2917311!4d69.2601421!16s%2Fg%2F11b8v75ndf?entry=ttu" target="_blank" class="contacts__map">
+								<img src="@img/map/map.jpg" alt="">
+							</a>
 						</div>
-						<a href="https://www.google.ru/maps/place/30+%D1%83%D0%BB%D0%B8%D1%86%D0%B0+%D0%A8%D0%BE%D1%82%D0%B0+%D0%A0%D1%83%D1%81%D1%82%D0%B0%D0%B2%D0%B5%D0%BB%D0%B8,+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82+100070,+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD/@41.2917311,69.2601421,19z/data=!3m1!4b1!4m6!3m5!1s0x38ae8ae8fab6ea51:0x3c4707145cc069f7!8m2!3d41.2917311!4d69.2601421!16s%2Fg%2F11b8v75ndf?entry=ttu" target="_blank" class="contacts__map">
-							<img src="@img/map/map.jpg" alt="">
-						</a>
 					</div>
 
-					<div class="contacts__submit submit">
-						<h4 class="submit__title title">ОСТАВИТЬ ЗАЯВКУ</h4>
-						<form action="#" class="submit__form form-submit">
-							<div class="form-submit__inputs">
-								<input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-submit__input input">
-								<input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-submit__input input">
+					<div class="contacts__say say" data-watch data-watch-threshold="0.3" data-watch-once>
+						<div class="say__body">
+							<div class="say__content">
+								<h4 class="say__title title">ОСТАВИТЬ ЗАЯВКУ</h4>
+								<form action="#" class="say__form form-say">
+									<div class="form-say__groop">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input input_white">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input input_white">
+									</div>
+									<button type="submit" class="form-say__button button">Отправить</button>
+								</form>
 							</div>
-							<button type="button" class="form-submit__button button">Отправить</button>
-						</form>
+							<div class="say__image-ibg"><img src="@img/say/01.jpg" alt=""></div>
+						</div>
 					</div>
 
+					<div class="readmore" data-watch data-watch-threshold="0.3" data-watch-once>
+						<h4 class="readmore__title title">ПРОДВИЖЕНИЕ БИЗНЕСА
+							с SHADOW</h4>
+						<div class="readmore__body">
+							<div class="readmore__image-ibg"><img src="@img/readmore/01.jpg" alt=""></div>
+							<div data-showmore="items" class="readmore__showmore showmore">
+								<div data-showmore-content="1" class="showmore__content">
+									<p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса. Мы проведем анализ рынка и конкурентов, чтобы определить самые эффективные каналы продвижения и создать уникальное предложение, которое будет привлекать Вашу целевую аудиторию.</p>
+									<p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса.</p>
+								</div>
+								<button hidden data-showmore-button type="button" class="showmore__more"><span>Подробнее</span><span>Скрыть</span></button>
+							</div>
+						</div>
+					</div>
 
 
 				</div>
 			</section>
 
-			<section class="readmore">
-				<div class="readmore__container">
-					<h4 class="readmore__title title">ПРОДВИЖЕНИЕ БИЗНЕСА
-						с SHADOW</h4>
-					<div class="readmore__body">
-						<div class="readmore__image-ibg"><img src="@img/readmore/01.jpg" alt=""></div>
-						<div data-showmore="items" class="readmore__showmore showmore">
-							<div data-showmore-content="1" class="showmore__content">
-								<p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса. Мы проведем анализ рынка и конкурентов, чтобы определить самые эффективные каналы продвижения и создать уникальное предложение, которое будет привлекать Вашу целевую аудиторию.</p>
-								<p>Мы - креативное агентство, специализирующееся на продвижении и брендинге бизнеса. Мы предлагаем весь спектр услуг, которые помогут Вашему бизнесу выделиться на рынке и привлечь новых клиентов. Наша команда профессионалов готова разработать для Вас уникальную стратегию продвижения, которая будет соответствовать целям и особенностям Вашего бизнеса.</p>
-							</div>
-							<button hidden data-showmore-button type="button" class="showmore__more"><span>Подробнее</span><span>Скрыть</span></button>
-						</div>
-					</div>
-				</div>
-			</section>
+
 
 			<!-- <section class="test">
 				<div class="test__container">

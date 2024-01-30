@@ -62,6 +62,11 @@
     align-items: center;
     gap: toRem(10);
   }
+  @media (min-width: $mobile) {
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 50, 15, 0, 1210, 767);
+  }
 
   &__body {
     @media (max-width: $mobile) {
@@ -87,12 +92,12 @@
 
   &__list {
     color: #fff;
-    font-size: toRem(16);
+    font-size: toRem(18);
     line-height: 100%; /* 100% */
 
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 40, 15, 0, 1210, 767);
+    @include adaptiveValue("column-gap", 50, 15, 0, 1210, 767);
     row-gap: toRem(10);
 
     @media (min-width: $mobile) {
@@ -224,11 +229,111 @@
   }
 
   &__button {
+    position: relative;
+    z-index: 6;
     @media (min-width: $mobile) {
       display: none;
     }
     font-size: toRem(17);
     height: toRem(40);
+
+    @media (max-width: $mobile) {
+      font-size: toRem(16);
+      padding: 0 toRem(15);
+    }
+  }
+
+  &__language {
+    position: relative;
+    z-index: 6;
+  }
+}
+
+.language {
+  max-width: toRem(100);
+  // min-width: toRem(85);
+  @include adaptiveValue("min-width", 85, 60);
+
+  color: #fff;
+  @include adaptiveValue("font-size", 18, 16);
+  font-weight: 400;
+  line-height: 22.4px; /* 124.444% */
+  position: relative;
+
+  &__top {
+    cursor: pointer;
+    border-radius: 10px;
+    background: #f00;
+
+    display: flex;
+    flex-direction: row-reverse;
+    gap: toRem(10);
+    align-items: center;
+    justify-content: center;
+    @include adaptiveValue("height", 45, 40);
+    transition: all 0.3s ease 0s;
+    .open-language & {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &::before {
+      @include adaptiveValue("font-size", 12, 10);
+
+      transition: transform 0.3s ease 0s;
+      .open-language & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__list {
+    border-radius: 0 0 10px 10px;
+    background: #f00;
+    padding: toRem(5) 0 toRem(7);
+
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    .open-language & {
+      visibility: visible;
+      pointer-events: all;
+      opacity: 1;
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    text-align: start;
+    display: block;
+    width: 100%;
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
+    @include adaptiveValue("padding-left", 20, 10);
+    @include adaptiveValue("padding-right", 20, 10);
+
+    @media (max-width: $mobile) {
+      padding-top: toRem(5);
+      padding-bottom: toRem(5);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }
 

@@ -21,13 +21,13 @@
 .showmore {
   &__content {
     color: #000;
-    font-family: Helvetica;
-    @include adaptiveValue("font-size", 22, 18);
+    // @include adaptiveValue("font-size", 22, 18);
+    font-size: toRem(18);
     font-style: normal;
     font-weight: 400;
     line-height: 136.4%; /* 30/22 */
 
-    @include adaptiveValue("margin-bottom", 28, 15);
+    @include adaptiveValue("margin-bottom", 20, 15);
 
     p {
       &:not(:last-child) {
@@ -41,10 +41,8 @@
     display: inline-block;
 
     color: #000;
-    font-family: Helvetica;
-    @include adaptiveValue("font-size", 22, 18);
-    font-weight: 700;
-    line-height: 177.3%; /* 39/22 */
+    @include adaptiveValue("font-size", 25, 18);
+    line-height: 120%; /* 30/25 */
 
     &::after {
       content: "";

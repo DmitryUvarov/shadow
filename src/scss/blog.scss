@@ -1,6 +1,6 @@
 .blog {
-  padding-top: toRem(35);
-  @include adaptiveValue("padding-bottom", 250, 40);
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
   &__container {
   }
 
@@ -96,8 +96,8 @@
 //========================================================================================================================================================
 
 .blog-article {
-  @include adaptiveValue("padding-top", 70, 40);
-  @include adaptiveValue("padding-bottom", 250, 40);
+  @include adaptiveValue("padding-top", 100, 40);
+  @include adaptiveValue("padding-bottom", 100, 40);
   &__container {
   }
 
@@ -124,16 +124,28 @@
 
   &__date {
     color: #7e7e7e;
-    @include adaptiveValue("font-size", 20, 16);
+    @include adaptiveValue("font-size", 25, 16);
     line-height: 100%; /* 20/20 */
   }
 
   &__body {
     color: #7e7e7e;
-    @include adaptiveValue("font-size", 20, 16);
+    @include adaptiveValue("font-size", 18, 16);
     line-height: 100%; /* 100% */
+    max-width: toRem(910);
+    margin: 0 auto;
 
-    p {
+    p,
+    li,
+    ul,
+    ol,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    div {
       &:not(:last-child) {
         @include adaptiveValue("margin-bottom", 35, 15);
       }

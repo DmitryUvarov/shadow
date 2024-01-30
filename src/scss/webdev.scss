@@ -1,50 +1,14 @@
 .screen {
   &__container {
-    padding-top: toRem(35);
-    @include adaptiveValue("padding-bottom", 95, 40, 0, 1210, 991);
+    @include adaptiveValue("padding-top", 100, 80);
+    @include adaptiveValue("padding-bottom", 95, 60);
 
     @media (max-width: $tablet) {
-      min-height: calc(100svh - var(--header-height));
+      min-height: calc(75svh - var(--header-height));
     }
   }
 
   &__body {
-    background: #1b1b1e;
-    padding: toRem(22) toRem(12);
-
-    @media (min-width: $tablet) {
-      display: flex;
-      align-items: center;
-      column-gap: toRem(30);
-    }
-    @media (max-width: $tablet) {
-      display: flex;
-      flex-direction: column;
-      padding: toRem(30) toRem(15);
-      min-height: calc(100svh - toRem(55) - var(--header-height));
-    }
-  }
-
-  &__decor-text {
-    white-space: nowrap;
-    color: #fe0000;
-    font-family: Benzin;
-    @include adaptiveValue("font-size", 45, 20);
-    font-weight: 700;
-    line-height: 133.3%; /* 60/45 */
-    text-transform: uppercase;
-    user-select: none;
-    b {
-      color: #fff;
-      display: block;
-    }
-    span {
-      color: #fe0000;
-    }
-
-    @media (max-width: $tablet) {
-      display: none;
-    }
   }
 
   &__content {
@@ -60,38 +24,27 @@
     align-items: center;
     column-gap: toRem(10);
 
-    color: #fff;
-    font-family: Helvetica;
-    @include adaptiveValue("font-size", 55, 35);
+    font-family: Benzin;
+    @include adaptiveValue("font-size", 90, 30);
     font-weight: 700;
-    line-height: 100%; /* 34.545% */
+    line-height: 130%; /* 117/90 */
     text-transform: uppercase;
-    @include adaptiveValue("margin-bottom", 30, 20);
-
-    &::before {
-      content: "";
-      flex-shrink: 0;
-      @include adaptiveValue("width", 60, 45);
-      @include adaptiveValue("height", 115, 75);
-      background-image: url("@img/screen/shadow.png");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+    // @include adaptiveValue("margin-bottom", 30, 20);
+    margin-bottom: toRem(10);
   }
 
   &__text {
-    color: #fff2f2;
-    font-family: Helvetica;
-    @include adaptiveValue("font-size", 20, 16);
+    max-width: toRem(720);
+    @include adaptiveValue("font-size", 25, 18);
     font-weight: 400;
     line-height: 110%; /* 22/20 */
 
-    @include adaptiveValue("margin-bottom", 36, 20);
+    @include adaptiveValue("margin-bottom", 60, 30);
   }
 
   &__buttons {
     display: flex;
-    gap: toRem(10);
+    gap: toRem(15);
 
     @media (max-width: $mobile) {
       flex-direction: column;
@@ -102,11 +55,28 @@
   }
 
   &__button {
+    @include adaptiveValue("font-size", 25, 18);
+    border-radius: 0;
+    padding: 0px toRem(40);
+    font-weight: 400;
     @media (min-width: $mobile) {
       min-width: toRem(222);
     }
     @media (max-width: $mobile) {
       width: 100%;
+    }
+
+    &.button_dark {
+      background-color: transparent;
+      color: #000;
+      border: 1px solid #000;
+
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -115,16 +85,15 @@
 
 .websites {
   position: relative;
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 90, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   &__container {
     position: relative;
     z-index: 2;
   }
 
   &__title {
-    max-width: toRem(650);
-    text-align: start;
+    max-width: toRem(830);
 
     @include adaptiveValue("margin-bottom", 60, 35);
   }
@@ -221,8 +190,8 @@
 
 .task {
   position: relative;
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 90, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   &__container {
     position: relative;
     z-index: 2;
@@ -239,17 +208,16 @@
   }
 
   &__maintitle {
-    text-align: start;
-    @include adaptiveValue("margin-bottom", 50, 35);
+    @include adaptiveValue("margin-bottom", 60, 35);
   }
 
   &__item {
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 30, 25);
+    margin-bottom: toRem(20);
     text-align: start;
-    max-width: toRem(600);
+    // max-width: toRem(600);
   }
 
   &__text {
@@ -257,7 +225,7 @@
     @include adaptiveValue("font-size", 20, 18);
     line-height: 110%; /* 22/20 */
 
-    max-width: toRem(545);
+    max-width: toRem(526);
   }
 
   &__bg-ibg {
@@ -281,6 +249,7 @@
   @media (max-width: $mobile) {
     padding: toRem(20) toRem(15) toRem(30);
   }
+
   &_big {
     @media (min-width: $mobile) {
       grid-column: span 2;
@@ -290,7 +259,7 @@
     }
     background-color: transparent;
     gap: 0;
-    padding: toRem(45) 0 0;
+    padding: 0 0 0 0;
   }
 
   &__top {
@@ -336,8 +305,8 @@
 //========================================================================================================================================================
 
 section.say {
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 200, 45);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 45);
 }
 .say {
   position: relative;
@@ -350,11 +319,12 @@ section.say {
   &__title {
     text-align: start;
     max-width: toRem(744);
-    @include adaptiveValue("margin-bottom", 60, 35);
+    margin-bottom: toRem(20);
   }
 
   &__body {
     display: flex;
+    justify-content: space-between;
     @include adaptiveValue("gap", 30, 20);
 
     @media (max-width: $mobile) {
@@ -363,12 +333,15 @@ section.say {
   }
 
   &__image-ibg {
-    padding-bottom: percent(575, 1180);
+    padding-bottom: percent(338, 1180);
     height: fit-content;
 
     @media (max-width: $pc) {
       flex-grow: 1;
-      padding-bottom: percent(240, 345);
+      // padding-bottom: percent(240, 345);
+    }
+    @media (max-width: $mobile) {
+      padding-bottom: percent(220, 345);
     }
     @media (min-width: $mobile) {
       flex: 0 0 percent(500, 1180);
@@ -376,9 +349,12 @@ section.say {
   }
 
   &__form {
+  }
+
+  &__content {
     @media (min-width: $mobile) {
-      margin-left: auto;
-      flex: 0 0 percent(580, 1180);
+      // margin-left: auto;
+      flex: 0 0 percent(490, 1180);
     }
   }
 
@@ -400,10 +376,10 @@ section.say {
   &__title {
     color: #fff;
     @include adaptiveValue("font-size", 21, 20);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 104.8%; /* 22/21 */
 
-    @include adaptiveValue("margin-bottom", 25, 15);
+    @include adaptiveValue("margin-bottom", 20, 15);
 
     &_dark {
       color: #2b2b2b;
@@ -429,14 +405,14 @@ section.say {
 //========================================================================================================================================================
 
 .cases {
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 90, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   &__container {
     display: grid;
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 50, 35);
+    @include adaptiveValue("margin-bottom", 60, 35);
     text-align: start;
   }
 
@@ -479,54 +455,26 @@ section.say {
     padding-bottom: percent(267, 380);
     position: relative;
     z-index: 1;
-  }
 
-  &__content {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    background: rgba(254, 0, 0, 0.77);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
-
-    padding: toRem(40) toRem(30);
-
-    transition: all 0.3s ease 0s;
-    @media (max-width: $mobile) {
-      padding: toRem(20) toRem(15);
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
     }
-
-    @media (any-hover: none) {
-      opacity: 1;
-      background: rgba(254, 0, 0, 0.15);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
     }
-  }
-
-  &__logo {
-    max-width: toRem(120);
-    @include adaptiveValue("margin-top", 40, 20);
-
-    img {
-      max-width: 100%;
-    }
-  }
-
-  &__title {
-    align-self: flex-start;
-    margin-top: auto;
-
-    color: #fff;
-    @include adaptiveValue("font-size", 22, 20);
-    font-weight: 700;
-    line-height: 136.4%; /* 30/22 */
   }
 }
 
@@ -534,17 +482,17 @@ section.say {
 
 .stages {
   position: relative;
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 90, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   &__container {
     position: relative;
     z-index: 2;
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 50, 35);
+    @include adaptiveValue("margin-bottom", 40, 35);
     text-align: start;
-    max-width: toRem(700);
+    max-width: toRem(1030);
   }
 
   &__items {
@@ -612,6 +560,10 @@ section.say {
     font-weight: 700;
     display: block;
     margin-bottom: toRem(5);
+
+    @media (min-width: $tablet) {
+      display: none;
+    }
   }
   &__title {
     color: #fff;
@@ -631,8 +583,8 @@ section.say {
 
 //========================================================================================================================================================
 .whyus {
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 110, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   &__container {
   }
 
@@ -705,8 +657,8 @@ section.say {
 //========================================================================================================================================================
 
 .faq {
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 105, 35);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
   position: relative;
   &__container {
     position: relative;
@@ -716,7 +668,7 @@ section.say {
   &__title {
     @include adaptiveValue("margin-bottom", 60, 35);
     text-align: start;
-    max-width: toRem(700);
+    max-width: toRem(850);
   }
 
   &__spollers {
@@ -729,5 +681,32 @@ section.say {
     top: 0;
     left: 0;
     z-index: 1;
+  }
+}
+
+//========================================================================================================================================================
+
+.photo {
+  @include adaptiveValue("padding-top", 50, 35);
+  @include adaptiveValue("padding-bottom", 100, 35);
+  &__container {
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 35);
+  }
+
+  &__images {
+    display: grid;
+    column-gap: toRem(20);
+    row-gap: toRem(15);
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__image-ibg {
+    padding-bottom: percent(440, 580);
   }
 }

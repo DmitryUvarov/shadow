@@ -18,7 +18,7 @@
   &__body {
     display: flex;
 
-    @include adaptiveValue("gap", 70, 30, 0, 1210, 991);
+    @include adaptiveValue("gap", 50, 20, 0, 1210, 1050);
 
     @media (max-width: $tablet) {
       flex-direction: column;
@@ -28,6 +28,7 @@
 
   &__logo {
     @include adaptiveValue("max-width", 99, 85);
+    flex-shrink: 0;
 
     transition: all 0.3s ease 0s;
 
@@ -45,12 +46,16 @@
     @media (min-width: $tablet) {
       min-width: toRem(200);
       padding-top: toRem(26);
+
+      &:last-child {
+        min-width: toRem(250);
+      }
     }
   }
 
   &__item {
     color: #fff;
-    @include adaptiveValue("font-size", 19, 18);
+    font-size: toRem(18);
     line-height: 100%; /* 100% */
 
     &:not(:last-child) {
@@ -65,7 +70,7 @@
     display: inline-block;
 
     @media (min-width: $tablet) {
-      @include adaptiveValue("margin-bottom", 33, 15);
+      @include adaptiveValue("margin-bottom", 39, 15);
     }
 
     @media (any-hover: hover) {
@@ -97,9 +102,9 @@
   &__top-link {
     display: flex;
     align-items: center;
-    @include adaptiveValue("column-gap", 22, 15);
+    @include adaptiveValue("column-gap", 12, 15);
     color: #fff;
-    @include adaptiveValue("font-size", 19, 18);
+    @include adaptiveValue("font-size", 18, 18);
     line-height: 100%; /* 100% */
 
     &::before {
@@ -120,7 +125,8 @@
   }
 
   &__list-image {
-    flex: 0 0 toRem(179);
+    width: toRem(224);
+    margin-top: toRem(40);
     @media (max-width: em(1210)) {
       display: none;
     }

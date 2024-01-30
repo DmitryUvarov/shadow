@@ -20,8 +20,8 @@
   &__title {
     color: inherit;
     text-align: left;
-    border: 1px solid #c8c8c8;
-    background-color: #c8c8c8;
+    border: 1px solid #dadada;
+    background-color: #dadada;
 
     cursor: pointer;
     width: 100%;
@@ -90,9 +90,9 @@
     border-radius: 0 0 toRem(10) toRem(10);
     min-width: 100%;
     left: 0;
-    background-color: #c8c8c8;
+    background-color: #dadada;
     border-top: 0;
-    border: 1px solid #c8c8c8;
+    border: 1px solid #dadada;
     border-top: 0;
     padding: 10px 0px 5px 0px;
 
@@ -136,7 +136,7 @@
     }
     @media (any-hover: hover) {
       &:hover {
-        background: #d9d9d9;
+        background: #c8c8c8;
         .select_dark & {
           background-color: #5b5a5a;
         }

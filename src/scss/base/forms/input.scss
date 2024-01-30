@@ -13,12 +13,12 @@ textarea {
   width: 100%;
   display: block;
   padding: 0px toRem(25);
-  border: 1px solid #c8c8c8;
-  background-color: #c8c8c8;
+  border: 1px solid #dadada;
+  background-color: #dadada;
   @include adaptiveValue("height", 64, 48);
 
   color: #686868;
-  font-family: Helvetica;
+  // font-family: Helvetica;
   @include adaptiveValue("font-size", 19, 18);
   font-weight: 400;
 
@@ -44,6 +44,12 @@ textarea {
       outline: none;
       color: #fff;
     }
+  }
+
+  &_white {
+    border-color: #fff;
+    background-color: #fff;
+    color: #686868;
   }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {

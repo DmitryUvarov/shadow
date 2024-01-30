@@ -1,7 +1,7 @@
 .products {
   position: relative;
-  @include adaptiveValue("padding-top", 90, 35);
-  @include adaptiveValue("padding-bottom", 150, 45);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 45);
 
   &__container {
     position: relative;
@@ -72,11 +72,12 @@
   &__title {
     color: #fff;
     @include adaptiveValue("font-size", 22, 20);
-    font-weight: 700;
+    font-weight: 600;
     line-height: 120%; /* 100% */
   }
 
   &__link {
+    font-weight: 600;
   }
 }
 
@@ -85,8 +86,9 @@
 .product {
   display: grid;
   @include adaptiveValue("gap", 130, 45);
-  padding-top: toRem(35);
-  @include adaptiveValue("padding-bottom", 200, 45);
+
+  @include adaptiveValue("padding-top", 100, 45);
+  @include adaptiveValue("padding-bottom", 100, 45);
 
   background-position-y: toRem(60);
   &__body {
@@ -135,23 +137,26 @@
 
   &__title {
     color: #000;
-    @include adaptiveValue("font-size", 40, 25);
-    font-weight: 700;
-    line-height: 137.5%; /* 55/40 */
+    // @include adaptiveValue("font-size", 40, 25);
+    // font-weight: 700;
+    // line-height: 137.5%; /* 55/40 */
     text-transform: uppercase;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 30, 20);
+      // @include adaptiveValue("margin-bottom", 30, 20);
+      margin-bottom: toRem(10);
     }
   }
 
   &__text {
     color: #686868;
-    @include adaptiveValue("font-size", 20, 18);
-    line-height: 110%; /* 22/20 */
+    // @include adaptiveValue("font-size", 20, 18);
+    font-size: toRem(18);
+    line-height: 130%;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 50, 30);
+      // @include adaptiveValue("margin-bottom", 50, 30);
+      margin-bottom: toRem(20);
     }
   }
 

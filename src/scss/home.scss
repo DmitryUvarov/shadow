@@ -7,7 +7,7 @@
 
   &__body {
     position: relative;
-    @include adaptiveValue("padding-top", 120, 80);
+    @include adaptiveValue("padding-top", 170, 80);
     @include adaptiveValue("padding-bottom", 120, 40);
 
     min-height: toRem(1080);
@@ -19,7 +19,7 @@
       flex-direction: column;
 
       text-align: center;
-      @include adaptiveValue("padding-top", 200, 170, 0, 991, 375);
+      @include adaptiveValue("padding-top", 200, 180, 0, 991, 375);
     }
 
     & > * {
@@ -29,13 +29,15 @@
   }
 
   &__title {
-    @include adaptiveValue("font-size", 120, 45);
-    line-height: 108.3%; /* 130/120 */
+    font-family: Benzin;
+    @include adaptiveValue("font-size", 90, 35);
+    line-height: 111.1%; /* 100/90 */
     font-weight: 700;
     text-transform: uppercase;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 50, 20);
+      // @include adaptiveValue("margin-bottom", 50, 20);
+      margin-bottom: toRem(10);
     }
   }
 
@@ -44,7 +46,7 @@
     line-height: 120%; /* 30/25 */
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 55, 30);
+      @include adaptiveValue("margin-bottom", 60, 30);
 
       @media (max-width: $mobile) {
         margin-bottom: toRem(120);
@@ -54,7 +56,8 @@
 
   &__buttons {
     display: flex;
-    @include adaptiveValue("gap", 20, 15);
+    // @include adaptiveValue("gap", 20, 15);
+    gap: toRem(15);
 
     @media (max-width: $tablet) {
       justify-content: center;
@@ -68,6 +71,8 @@
 
   &__button {
     @include adaptiveValue("font-size", 22, 18);
+    border-radius: 0;
+    font-weight: 400;
     @media (min-width: $tablet) {
       min-width: toRem(360);
     }
@@ -78,8 +83,8 @@
 
   &__shadow {
     position: absolute;
-    bottom: toRem(210);
-    right: toRem(146);
+    bottom: toRem(31);
+    right: toRem(121);
     z-index: 1;
 
     width: percent(213, 1180);
@@ -92,6 +97,16 @@
 
     img {
       max-width: 100%;
+      transform: scale(0);
+      opacity: 0;
+
+      .loaded & {
+        transition:
+          transform 0.8s ease 0s,
+          opacity 0.8s ease 0s;
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   }
 
@@ -106,15 +121,15 @@
 
 .doing {
   position: relative;
-  @include adaptiveValue("padding-top", 80, 35);
-  @include adaptiveValue("padding-bottom", 175, 40);
+  @include adaptiveValue("padding-top", 220, 45);
+  @include adaptiveValue("padding-bottom", 125, 40);
   &__container {
     position: relative;
     z-index: 3;
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 95, 35);
+    @include adaptiveValue("margin-bottom", 70, 35);
   }
 
   &__items {
@@ -150,6 +165,7 @@
 
   text-align: center;
   &__ico {
+    max-width: toRem(78);
     @media (min-width: $mobile) {
       flex: 0 0 toRem(68);
     }
@@ -163,22 +179,24 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: toRem(15);
+      margin-bottom: toRem(20);
     }
   }
 
   &__title {
     color: #fff;
-    @include adaptiveValue("font-size", 24, 22);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 25, 22);
     line-height: 104.2%; /* 25/24 */
     &:not(:last-child) {
-      margin-bottom: toRem(11);
+      margin-bottom: toRem(10);
     }
   }
 
   &__text {
-    color: #858585;
-    @include adaptiveValue("font-size", 22, 18);
+    color: #fff;
+    // @include adaptiveValue("font-size", 22, 18);
+    font-size: toRem(18);
     line-height: 131.8%; /* 29/22 */
   }
 }
@@ -188,7 +206,7 @@
 .numbers-block {
   position: relative;
   @include adaptiveValue("padding-top", 100, 35);
-  @include adaptiveValue("padding-bottom", 235, 50);
+  @include adaptiveValue("padding-bottom", 115, 50);
   &__container {
     & > * {
       position: relative;
@@ -197,8 +215,9 @@
   }
 
   &__title {
+    @include adaptiveValue("font-size", 90, 35);
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 70, 40);
+      @include adaptiveValue("margin-bottom", 80, 40);
     }
 
     @media (max-width: $mobile) {
@@ -213,7 +232,7 @@
 .numbers {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(toRem(345), 1fr));
-  @include adaptiveValue("gap", 30, 15);
+  @include adaptiveValue("gap", 20, 15);
 
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
@@ -225,7 +244,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include adaptiveValue("gap", 17, 5);
+  // @include adaptiveValue("gap", 17, 5);
   text-align: center;
 
   @media (max-width: $mobile) {
@@ -235,6 +254,7 @@
 
   &__num {
     color: #fe0000;
+    // font-family: Benzin;
     @include adaptiveValue("font-size", 120, 55);
     font-weight: 700;
     line-height: 116.7%; /* 140/120 */
@@ -258,8 +278,8 @@
 
 .portfolio {
   position: relative;
-  @include adaptiveValue("padding-top", 95, 35);
-  @include adaptiveValue("padding-bottom", 150, 40);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 40);
   &__container {
     position: relative;
     z-index: 2;
@@ -267,29 +287,33 @@
 
   &__top {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-    @include adaptiveValue("gap", 28, 15);
+    @include adaptiveValue("gap", 20, 15);
     @media (max-width: $mobile) {
       flex-direction: column;
-      gap: toRem(50);
+      align-items: flex-start;
+      gap: toRem(10);
     }
 
-    @include adaptiveValue("margin-bottom", 25, 10);
+    @include adaptiveValue("margin-bottom", 20, 10);
   }
 
   &__title {
+    @include adaptiveValue("font-size", 90, 35);
   }
 
   &__text {
-    text-align: center;
+    // text-align: center;
     color: #fff;
-    @include adaptiveValue("font-size", 22, 16);
+    @include adaptiveValue("font-size", 25, 16);
     line-height: 136.4%; /* 30/22 */
   }
 
   &__items {
     @include adaptiveValue("margin-top", 55, 30);
+    max-width: toRem(826);
+    margin: 0 auto;
   }
 
   &__wrapper {
@@ -302,7 +326,7 @@
         @include adaptiveValue("column-gap", 50, 15);
         @include adaptiveValue("row-gap", 38, 20);
         grid-template-columns: repeat(5, 1fr);
-        grid-template-columns: repeat(auto-fill, minmax(toRem(160), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(toRem(110), 1fr));
       }
     }
   }
@@ -330,13 +354,18 @@
 //========================================================================================================================================================
 
 .facts {
-  @include adaptiveValue("padding-top", 85, 35);
-  @include adaptiveValue("padding-bottom", 95, 40);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 70, 40);
   &__container {
+    & > * {
+      position: relative;
+      z-index: 3;
+    }
   }
 
   &__title {
-    @include adaptiveValue("margin-bottom", 70, 35);
+    @include adaptiveValue("font-size", 90, 35);
+    @include adaptiveValue("margin-bottom", 60, 35);
 
     @media (max-width: $mobile) {
       text-align: start;
@@ -345,7 +374,7 @@
 
   &__numbers {
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 135, 50);
+      @include adaptiveValue("margin-bottom", 150, 50);
     }
   }
 
@@ -354,14 +383,16 @@
 }
 .team {
   &__title {
+    @include adaptiveValue("font-size", 90, 35);
     @include adaptiveValue("margin-bottom", 70, 35);
-    text-align: start;
   }
 
   &__items {
     display: grid;
     column-gap: toRem(20);
     row-gap: toRem(25);
+    max-width: toRem(910);
+    margin: 0 auto;
 
     grid-template-columns: repeat(2, 1fr);
     @media (max-width: $mobile) {
@@ -439,8 +470,8 @@
 
 .process {
   position: relative;
-  @include adaptiveValue("padding-top", 105, 35);
-  @include adaptiveValue("padding-bottom", 125, 40);
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 65, 40);
   &__container {
     position: relative;
 
@@ -451,18 +482,23 @@
   }
 
   &__title {
-    text-align: start;
-    @include adaptiveValue("margin-bottom", 20, 35);
+    @include adaptiveValue("font-size", 90, 35);
+    @include adaptiveValue("margin-bottom", 160, 35);
+    max-width: toRem(706);
   }
 
   &__body {
     display: flex;
-    @include adaptiveValue("column-gap", 70, 20, 0, 1210, 991);
+    @include adaptiveValue("column-gap", 20, 20, 0, 1210, 991);
   }
 
   &__image {
-    flex: 0 0 toRem(290);
+    flex: 0 0 toRem(300);
     padding-top: toRem(90);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: toRem(25);
 
     img {
       max-width: 100%;
@@ -480,7 +516,6 @@
   &__item {
     position: relative;
     color: #fff;
-    font-family: Helvetica;
     @include adaptiveValue("font-size", 25, 18, 0, 1210, 991);
     font-weight: 300;
     line-height: 120%; /* 30/25 */
@@ -491,6 +526,7 @@
       }
       &:nth-child(even) {
         padding-right: 50%;
+        text-align: end;
       }
     }
     @media (max-width: $mobile) {
@@ -566,10 +602,8 @@
 //========================================================================================================================================================
 
 .contacts {
-  @include adaptiveValue("padding-top", 120, 35);
-  @include adaptiveValue("padding-bottom", 60, 40);
-
-  background-repeat: no-repeat;
+  @include adaptiveValue("padding-top", 100, 35);
+  @include adaptiveValue("padding-bottom", 100, 40);
 
   &__container {
     display: grid;
@@ -616,18 +650,18 @@
 
   &__line-body {
     display: grid;
-    @include adaptiveValue("gap", 30, 20);
-
-    @include adaptiveValue("font-size", 22, 17);
+    // @include adaptiveValue("gap", 30, 20);
+    gap: toRem(20);
+    @include adaptiveValue("font-size", 25, 17);
     line-height: 136.4%; /* 30/22 */
   }
 
   &__line-text {
-    max-width: toRem(500);
+    max-width: toRem(520);
   }
 
   &__line-title {
-    font-weight: 700;
+    // font-weight: 700;
   }
 
   &__map {
@@ -636,7 +670,7 @@
     padding-bottom: percent(415, 1180);
 
     @media (min-width: $mobile) {
-      flex: 0 0 percent(488, 1180);
+      flex: 0 0 percent(500, 1180);
     }
     @media (max-width: $mobile) {
       padding-bottom: percent(220, 345);
@@ -708,14 +742,15 @@ section.readmore {
 }
 .readmore {
   &__title {
-    max-width: toRem(753);
-    @include adaptiveValue("margin-bottom", 57, 30);
+    max-width: toRem(935);
+    @include adaptiveValue("font-size", 55, 30);
+    @include adaptiveValue("margin-bottom", 60, 30);
     text-align: start;
   }
 
   &__body {
     display: flex;
-    @include adaptiveValue("gap", 36, 15, 0, 1210, 767);
+    @include adaptiveValue("gap", 20, 15, 0, 1210, 767);
 
     @media (max-width: $mobile) {
       flex-direction: column;
@@ -739,7 +774,34 @@ section.readmore {
 //========================================================================================================================================================
 
 .video {
+  position: relative;
   video {
+    cursor: pointer;
     max-width: 100%;
+  }
+
+  &__button {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // @include adaptiveValue("wight", 195, 75);
+    width: percent(195, 1920);
+    transition: opacity 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .playing & {
+      opacity: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 }

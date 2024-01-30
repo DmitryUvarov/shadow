@@ -12,26 +12,13 @@
             <section class="screen text-bg">
                 <div class="screen__container">
                     <div class="screen__body">
-                        <div class="screen__decor-text">
-                            <p>создание</p>
-                            <p>САЙТОВ соз</p>
-                            <p>здание САЙ</p>
-                            <p>ие САЙТОВ</p>
-                            <b>создание</b>
-                            <p>ТОВ созда</p>
-                            <p>САЙТОВ со</p>
-                            <p>создание</p>
-                            <p>АЙТОВ</p>
+                        <h1 class="screen__title">создание сайтов</h1>
+                        <div class="screen__text">
+                            <p>Создаём уникальные и функциональные веб-сайты для бизнеса, личного использования, интернет-магазины и для других целей.</p>
                         </div>
-                        <div class="screen__content">
-                            <h1 class="screen__title">создание сайтов</h1>
-                            <div class="screen__text">
-                                <p>Создаём уникальные и функциональные веб-сайты для бизнеса, личного использования, интернет-магазины и для других целей.</p>
-                            </div>
-                            <div class="screen__buttons">
-                                <button class="screen__button button" data-popup="#popup">Обсудить проект</button>
-                                <button class="screen__button button-line">Посмотреть кейсы</button>
-                            </div>
+                        <div class="screen__buttons">
+                            <button class="screen__button button" data-popup="#popup">Обсудить проект</button>
+                            <button class="screen__button button button_dark">Посмотреть кейсы</button>
                         </div>
                     </div>
                 </div>
@@ -137,32 +124,7 @@
                 </div>
             </section>
 
-            <section class="say">
-                <div class="say__container">
-                    <h4 class="say__title title title_white">РАССКАЖИТЕ О СВОЕЙ ЗАДАЧЕ</h4>
-                    <div class="say__body">
-                        <form action="#" class="say__form form-say">
-                            <div class="form-say__groop">
-                                <div class="form-say__title">Контактные данные</div>
-                                <input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input input_dark">
-                                <input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input input_dark">
-                            </div>
-                            <div class="form-say__groop">
-                                <div class="form-say__title">Тип сайта</div>
-                                <select name="form[]" class="form" data-class-modif="dark">
-                                    <option value="1" selected>Landing Page</option>
-                                    <option value="2">Корпоративный сайт</option>
-                                    <option value="3">Интернет магазин</option>
-                                    <option value="4">Сайт-визитка</option>
-                                    <option value="5">Разработка E-commerce</option>
-                                </select>
-                            </div>
-                            <button type="submit" class="form-say__button button">Отправить</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="say__bg-ibg"><img src="@img/say/bg.jpg" alt=""></div>
-            </section>
+            @@include('html/_say.htm',{})
 
             <section class="cases text-bg">
                 <div class="cases__container">
@@ -170,45 +132,15 @@
                     <div class="cases__items">
                         <a href="#" class="cases__item item-cases">
                             <div class="item-cases__image-ibg"><img src="@img/cases/01.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
                         </a>
                         <a href="#" class="cases__item item-cases">
-                            <div class="item-cases__image-ibg"><img src="@img/cases/02.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
+                            <div class="item-cases__image-ibg"><img src="@img/cases/01.jpg" alt=""></div>
                         </a>
                         <a href="#" class="cases__item item-cases">
-                            <div class="item-cases__image-ibg"><img src="@img/cases/03.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
+                            <div class="item-cases__image-ibg"><img src="@img/cases/01.jpg" alt=""></div>
                         </a>
                         <a href="#" class="cases__item item-cases">
-                            <div class="item-cases__image-ibg"><img src="@img/cases/04.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
-                        </a>
-                        <a href="#" class="cases__item item-cases">
-                            <div class="item-cases__image-ibg"><img src="@img/cases/05.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
-                        </a>
-                        <a href="#" class="cases__item item-cases">
-                            <div class="item-cases__image-ibg"><img src="@img/cases/06.jpg" alt=""></div>
-                            <div class="item-cases__content">
-                                <div class="item-cases__logo"><img src="@img/cases/logo.png" alt=""></div>
-                                <div class="item-cases__title">Наименование сайта </div>
-                            </div>
+                            <div class="item-cases__image-ibg"><img src="@img/cases/01.jpg" alt=""></div>
                         </a>
                     </div>
                     <button class="cases__button button">Посмотреть ещё</button>
@@ -349,27 +281,30 @@
 
                 <div class="say">
                     <div class="say__container">
-                        <h4 class="say__title title">РАССКАЖИТЕ О СВОЕЙ ЗАДАЧЕ</h4>
+
                         <div class="say__body">
+                            <div class="say__content">
+                                <h4 class="say__title title">Оставить
+                                    заявку</h4>
+                                <form action="#" class="say__form form-say">
+                                    <div class="form-say__groop">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input">
+                                        <input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input">
+                                    </div>
+                                    <div class="form-say__groop">
+                                        <div class="form-say__title form-say__title_dark">Тип сайта</div>
+                                        <select name="form[]" class="form">
+                                            <option value="1" selected>Landing Page</option>
+                                            <option value="2">Корпоративный сайт</option>
+                                            <option value="3">Интернет магазин</option>
+                                            <option value="4">Сайт-визитка</option>
+                                            <option value="5">Разработка E-commerce</option>
+                                        </select>
+                                    </div>
+                                    <button type="submit" class="form-say__button button">Отправить</button>
+                                </form>
+                            </div>
                             <div class="say__image-ibg"><img src="@img/say/01.jpg" alt=""></div>
-                            <form action="#" class="say__form form-say">
-                                <div class="form-say__groop">
-                                    <div class="form-say__title form-say__title_dark">Контактные данные</div>
-                                    <input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input">
-                                    <input autocomplete="off" type="text" name="form[]" placeholder="Телефон" class="form-say__input input">
-                                </div>
-                                <div class="form-say__groop">
-                                    <div class="form-say__title form-say__title_dark">Тип сайта</div>
-                                    <select name="form[]" class="form">
-                                        <option value="1" selected>Landing Page</option>
-                                        <option value="2">Корпоративный сайт</option>
-                                        <option value="3">Интернет магазин</option>
-                                        <option value="4">Сайт-визитка</option>
-                                        <option value="5">Разработка E-commerce</option>
-                                    </select>
-                                </div>
-                                <button type="submit" class="form-say__button button">Отправить</button>
-                            </form>
                         </div>
                     </div>
                 </div>
