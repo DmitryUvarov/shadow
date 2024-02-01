@@ -51,7 +51,7 @@ body::after {
   visibility: hidden;
   transform: scale(0);
   transition: transform 0.3s ease 0s;
-  background-color: #dadada;
+  background-color: #fff;
   padding: toRem(40) toRem(45) toRem(0);
   width: 100%;
   max-width: toRem(1070);
@@ -67,10 +67,26 @@ body::after {
 //========================================================================================================================================================
 
 .popup {
+  &_thank {
+    .popup__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup__image {
+      @media (max-width: $mobile) {
+        opacity: 0.3;
+      }
+    }
+  }
   &__wrapper {
   }
 
   &__content {
+    min-height: toRem(430);
+    @media (min-width: $tablet) {
+      min-height: toRem(516);
+    }
   }
 
   &__close {
@@ -95,6 +111,7 @@ body::after {
     @include adaptiveValue("margin-bottom", 45, 25);
     &.title {
       text-align: start;
+      @include adaptiveValue("font-size", 50, 30);
     }
   }
 
@@ -141,6 +158,39 @@ body::after {
     }
     @media (max-width: $mobile) {
       flex: 1 1 auto;
+    }
+
+    input {
+      background-color: #c8c8c8;
+    }
+  }
+
+  &__thank {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: toRem(20);
+
+    padding-bottom: toRem(40);
+    max-width: toRem(590);
+    margin: 0 auto;
+
+    .popup__title {
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  &__text {
+    @include adaptiveValue("font-size", 25, 16);
+
+    br {
+      @media (max-width: $mobile) {
+        display: none;
+      }
     }
   }
 }
