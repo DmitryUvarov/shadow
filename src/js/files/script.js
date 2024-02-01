@@ -55,9 +55,11 @@ function pageLoad() {
   if (videoBlock) {
     let video = videoBlock.querySelector("video")
     video.pause()
-    // let playPauseBtn = videoBlock.querySelector(".video__button")
+    let videoPreview = videoBlock.querySelector(".video__preview-ibg")
 
     video.addEventListener("click", function () {
+      if (videoPreview) videoPreview.remove()
+
       if (video.paused) {
         video.play()
         videoBlock.classList.add("playing")
