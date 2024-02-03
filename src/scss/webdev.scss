@@ -128,7 +128,7 @@
   transition: all 0.3s ease 0s;
 
   @media (max-width: $mobile) {
-    padding: toRem(20) toRem(15) toRem(30);
+    padding: toRem(20) toRem(25) toRem(30) toRem(15);
   }
 
   @media (any-hover: hover) {
@@ -147,7 +147,7 @@
 
     width: toRem(75);
     height: toRem(177);
-    @include adaptiveValue("width", 75, 50);
+    @include adaptiveValue("width", 75, 40);
     @include adaptiveValue("height", 177, 145);
 
     position: absolute;
@@ -549,6 +549,9 @@ section.say {
   @media (min-width: $tablet) {
     &:nth-child(even) {
       margin-top: toRem(-20);
+    }
+    &:last-child {
+      margin-top: toRem(-40);
     }
   }
 

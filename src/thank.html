@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="hero hero_thank text-bg" data-prlx-mouse-wrapper>
+				<div class="hero__container">
+					<div class="hero__body">
+						<h1 class="hero__title">Спасибо за <br> вашу заявку! </h1>
+						<div class="hero__text">Наш менеджер свяжется с вами по указанному номеру телефона в ближайшее время</div>
+						<div class="hero__shadow" data-prlx-mouse data-prlx-cx="-90" data-prlx-cy="75"><img src="@img/decor/shadow_black.svg" alt=""></div>
+					</div>
+
+					<div class="hero__decor decor">
+						<div class="decor__item decor__item_1" data-prlx-mouse data-prlx-cx="50" data-prlx-cy="75"><img src="@img/decor/01.png" alt=""></div>
+						<div class="decor__item decor__item_2" data-prlx-mouse data-prlx-cx="-75" data-prlx-cy="-50"><img src="@img/decor/02.png" alt=""></div>
+						<div class="decor__item decor__item_3" data-prlx-mouse data-prlx-cx="50" data-prlx-cy="75"><img src="@img/decor/03.png" alt=""></div>
+						<div class="decor__item decor__item_4" data-prlx-mouse data-prlx-cx="-75" data-prlx-cy="-50"><img src="@img/decor/04.png" alt=""></div>
+						<div class="decor__item decor__item_5" data-prlx-mouse data-prlx-cx="50" data-prlx-cy="75"><img src="@img/decor/05.png" alt=""></div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
