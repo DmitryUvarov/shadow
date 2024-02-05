@@ -94,7 +94,7 @@
 
   &__title {
     max-width: toRem(830);
-
+    @include adaptiveValue("font-size", 55, 26);
     @include adaptiveValue("margin-bottom", 60, 35);
   }
 

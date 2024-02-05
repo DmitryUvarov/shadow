@@ -545,6 +545,11 @@
         text-align: end;
       }
     }
+    @media (min-width: $pc) {
+      &:nth-child(odd) {
+        padding-left: calc(50% + toRem(15));
+      }
+    }
     @media (max-width: $mobile) {
       padding-left: toRem(40);
     }
