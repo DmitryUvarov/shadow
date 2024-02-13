@@ -111,7 +111,13 @@ body::after {
     @include adaptiveValue("margin-bottom", 45, 25);
     &.title {
       text-align: start;
-      @include adaptiveValue("font-size", 50, 30);
+    }
+
+    &_small {
+      max-width: toRem(830);
+      &.title {
+        @include adaptiveValue("font-size", 30, 25);
+      }
     }
   }
 

@@ -56,9 +56,24 @@
             </section>
 
 
-
-
-            @@include('html/_say.htm',{})
+            <section class="say">
+                <div class="say__container">
+                    <div class="say__body">
+                        <div class="say__content">
+                            <h4 class="say__title say__title_small title title_white ">Оставьте свои контактные данные и получите консультацию по SMM</h4>
+                            <form action="#" class="say__form form-say">
+                                <div class="form-say__groop">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="Имя и фамилия" class="form-say__input input input_dark">
+                                    <input autocomplete="off" type="text" name="form[]" placeholder="Телефон" data-phone class="form-say__input input input_dark">
+                                </div>
+                                <button type="submit" class="form-say__button button">Отправить</button>
+                            </form>
+                        </div>
+                        <div class="say__image-ibg"><img src="@img/say/01.jpg" alt=""></div>
+                    </div>
+                </div>
+                <div class="say__bg-ibg"><img src="@img/say/bg.jpg" alt=""></div>
+            </section>
 
             <section class="bottom text-bg">
 

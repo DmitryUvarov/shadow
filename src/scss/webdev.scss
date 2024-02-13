@@ -320,6 +320,11 @@ section.say {
     text-align: start;
     max-width: toRem(744);
     margin-bottom: toRem(20);
+
+    &_small {
+      @include adaptiveValue("font-size", 30, 25);
+      @include adaptiveValue("margin-bottom", 40, 20);
+    }
   }
 
   &__body {
@@ -349,12 +354,15 @@ section.say {
   }
 
   &__form {
+    @media (min-width: $mobile) {
+      max-width: toRem(490);
+    }
   }
 
   &__content {
     @media (min-width: $mobile) {
       // margin-left: auto;
-      flex: 0 0 percent(490, 1180);
+      // flex: 0 0 percent(490, 1180);
     }
   }
 
