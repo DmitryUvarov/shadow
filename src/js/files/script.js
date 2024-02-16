@@ -49,24 +49,4 @@ function pageLoad() {
 
     //////
   })
-
-  let videoBlock = document.querySelector("section.video")
-
-  if (videoBlock) {
-    let video = videoBlock.querySelector("video")
-    video.pause()
-    let videoPreview = videoBlock.querySelector(".video__preview-ibg")
-
-    video.addEventListener("click", function () {
-      if (videoPreview) videoPreview.remove()
-
-      if (video.paused) {
-        video.play()
-        videoBlock.classList.add("playing")
-      } else {
-        video.pause()
-        videoBlock.classList.remove("playing")
-      }
-    })
-  }
 }
